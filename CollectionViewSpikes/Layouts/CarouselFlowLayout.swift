@@ -20,7 +20,7 @@ class CarouselFlowLayout: UICollectionViewFlowLayout {
     
     static let sectionInsetTop: CGFloat = 16
     static let sectionInsetLeft: CGFloat = 16
-    static let sectionInsetBottom: CGFloat = 0
+    static let sectionInsetBottom: CGFloat = 16
     static let sectionInsetRight: CGFloat = 16
     
     static let minimumLineSpacing: CGFloat = 1
@@ -40,7 +40,7 @@ class CarouselFlowLayout: UICollectionViewFlowLayout {
     scrollDirection = .horizontal
     
     itemSize = CGSize(width: LayoutMetrics.itemSizeWidth, height: LayoutMetrics.itemSizeHeight)
-    
+
     estimatedItemSize = CGSize(width: LayoutMetrics.itemSizeWidth, height: LayoutMetrics.itemSizeHeight)
     
     sectionInset = UIEdgeInsets(top: LayoutMetrics.sectionInsetTop, left: LayoutMetrics.sectionInsetLeft, bottom: LayoutMetrics.sectionInsetBottom, right: LayoutMetrics.sectionInsetRight)

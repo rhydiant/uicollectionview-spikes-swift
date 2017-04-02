@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+/// Presents cards with a stretchy header
 class StretchyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
   // MARK: - Outlets
@@ -28,7 +30,7 @@ class StretchyViewController: UIViewController, UICollectionViewDataSource, UICo
     super.viewDidLoad()
     
     style()
-    setupCollectionView()
+    setupCollectionView()      
   }
   
   
