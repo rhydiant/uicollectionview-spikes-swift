@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I5e-5a-vHl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oR7-9f-flQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -115,7 +115,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="7OI-eD-poe"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ebH-QM-786">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ebH-QM-786" customClass="CarouselFlowLayout" customModule="CollectionViewSpikes" customModuleProvider="target">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -151,5 +151,71 @@
             </objects>
             <point key="canvasLocation" x="-474.39999999999998" y="564.46776611694156"/>
         </scene>
+        <!--Stretchy View Controller-->
+        <scene sceneID="7qg-bH-bdB">
+            <objects>
+                <viewController id="oR7-9f-flQ" customClass="StretchyViewController" customModule="CollectionViewSpikes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Er-h0-3WI"/>
+                        <viewControllerLayoutGuide type="bottom" id="diA-wd-bDq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HVc-Su-EdT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b3H-l0-V0k">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gLR-c7-wMe" customClass="StretchyHeaderLayout" customModule="CollectionViewSpikes" customModuleProvider="target">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="195"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellIdentifier" id="bHP-T2-jaQ" customClass="CustomCell" customModule="CollectionViewSpikes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="195" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderIdentifier" id="dJ0-f6-65J">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pattern" translatesAutoresizingMaskIntoConstraints="NO" id="ove-NY-UHW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ove-NY-UHW" firstAttribute="top" secondItem="dJ0-f6-65J" secondAttribute="top" id="356-xT-RAY"/>
+                                        <constraint firstAttribute="trailing" secondItem="ove-NY-UHW" secondAttribute="trailing" id="4z5-Qk-Ght"/>
+                                        <constraint firstItem="ove-NY-UHW" firstAttribute="leading" secondItem="dJ0-f6-65J" secondAttribute="leading" id="f6O-TM-CX5"/>
+                                        <constraint firstAttribute="bottom" secondItem="ove-NY-UHW" secondAttribute="bottom" id="ho3-Ta-poJ"/>
+                                    </constraints>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="oR7-9f-flQ" id="fQ8-6K-kVT"/>
+                                    <outlet property="delegate" destination="oR7-9f-flQ" id="zoV-w7-oG6"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="b3H-l0-V0k" id="ZoL-we-gjc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5WC-of-vSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487.19999999999999" y="1327.2863568215894"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="pattern" width="1366" height="768"/>
+    </resources>
 </document>

@@ -39,13 +39,6 @@ class CarouselViewController: UIViewController, UICollectionViewDataSource {
   
   private func setupCollectionView() {
     collectionView.style()
-    
-    // alternative to implementing a `UICollectionViewDelegateFlowLayout`
-    if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-      layout.scrollDirection = .horizontal
-      layout.itemSize = CGSize(width: 150, height: 100)
-      layout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16)
-    }
   }
 
   

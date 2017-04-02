@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B3FE88C1E909D1600FC1612 /* StretchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FE88B1E909D1600FC1612 /* StretchyViewController.swift */; };
+		4B3FE88E1E90A01300FC1612 /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FE88D1E90A01300FC1612 /* StretchyHeaderLayout.swift */; };
 		4B6554AF1E90644600093AA1 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6554AE1E90644600093AA1 /* CarouselViewController.swift */; };
 		4B6554B41E90662A00093AA1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6554B21E90662A00093AA1 /* CustomCell.swift */; };
 		4B6554B51E90662A00093AA1 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6554B31E90662A00093AA1 /* CustomHeader.swift */; };
 		4B6554B81E90666500093AA1 /* UI+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6554B71E90666500093AA1 /* UI+Styles.swift */; };
-		4B6554BB1E90668E00093AA1 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6554BA1E90668E00093AA1 /* CustomFlowLayout.swift */; };
+		4B6554BB1E90668E00093AA1 /* CarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6554BA1E90668E00093AA1 /* CarouselFlowLayout.swift */; };
 		4B6554BE1E9066C500093AA1 /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6554BD1E9066C500093AA1 /* DateViewModel.swift */; };
 		4B79BC961E906231002F7FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79BC951E906231002F7FFC /* AppDelegate.swift */; };
 		4B79BC9B1E906231002F7FFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B79BC991E906231002F7FFC /* Main.storyboard */; };
@@ -22,11 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B3FE88B1E909D1600FC1612 /* StretchyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchyViewController.swift; sourceTree = "<group>"; };
+		4B3FE88D1E90A01300FC1612 /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
 		4B6554AE1E90644600093AA1 /* CarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		4B6554B21E90662A00093AA1 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		4B6554B31E90662A00093AA1 /* CustomHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
 		4B6554B71E90666500093AA1 /* UI+Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Styles.swift"; sourceTree = "<group>"; };
-		4B6554BA1E90668E00093AA1 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
+		4B6554BA1E90668E00093AA1 /* CarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselFlowLayout.swift; sourceTree = "<group>"; };
 		4B6554BD1E9066C500093AA1 /* DateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
 		4B79BC921E906231002F7FFC /* CollectionViewSpikes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewSpikes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B79BC951E906231002F7FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			children = (
 				4B79BCA81E906276002F7FFC /* GroupedViewController.swift */,
 				4B6554AE1E90644600093AA1 /* CarouselViewController.swift */,
+				4B3FE88B1E909D1600FC1612 /* StretchyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -78,7 +83,8 @@
 		4B6554B91E90666C00093AA1 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
-				4B6554BA1E90668E00093AA1 /* CustomFlowLayout.swift */,
+				4B6554BA1E90668E00093AA1 /* CarouselFlowLayout.swift */,
+				4B3FE88D1E90A01300FC1612 /* StretchyHeaderLayout.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B3FE88E1E90A01300FC1612 /* StretchyHeaderLayout.swift in Sources */,
 				4B6554B51E90662A00093AA1 /* CustomHeader.swift in Sources */,
 				4B79BCAF1E906276002F7FFC /* GroupedViewController.swift in Sources */,
 				4B6554B41E90662A00093AA1 /* CustomCell.swift in Sources */,
@@ -205,7 +212,8 @@
 				4B6554B81E90666500093AA1 /* UI+Styles.swift in Sources */,
 				4B79BC961E906231002F7FFC /* AppDelegate.swift in Sources */,
 				4B6554BE1E9066C500093AA1 /* DateViewModel.swift in Sources */,
-				4B6554BB1E90668E00093AA1 /* CustomFlowLayout.swift in Sources */,
+				4B6554BB1E90668E00093AA1 /* CarouselFlowLayout.swift in Sources */,
+				4B3FE88C1E909D1600FC1612 /* StretchyViewController.swift in Sources */,
 				4B6554AF1E90644600093AA1 /* CarouselViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
