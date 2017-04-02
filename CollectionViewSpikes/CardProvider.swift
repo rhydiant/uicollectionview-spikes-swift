@@ -9,19 +9,26 @@
 import Foundation
 
 
-/// A `CardProvider` to generate a given number of cards in sections
+/// A `Card` data type
+struct Card {
+  let index: Int
+}
+
+
+
+/// A `CardProvider` to generate a given number of `Card`s (in sections)
 struct CardProvider {
   
   // MARK: - Private properties
   
-  private var cardsGroupedByDate: [[Date: [String]]]
+  private var cardsGroupedByDate: [[Date: [Card]]]
   
   
   
   // MARK: - Lifecycle
   
   init(numberOfSections: Int = 10, numberOfCardsInSection: Int = 5) {
-    let cards = (1...numberOfCardsInSection).map { "row \($0)" }
+    let cards = (1...numberOfCardsInSection).map { Card(index: $0) }
     let sections = (1...numberOfSections).map { [Date().addingTimeInterval(60*60*24*Double($0)): cards] }
     
     self.cardsGroupedByDate = sections

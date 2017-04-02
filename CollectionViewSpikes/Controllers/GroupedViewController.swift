@@ -42,6 +42,7 @@ class GroupedViewController: UIViewController, UICollectionViewDataSource, UICol
     
     if let collectionViewLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
       collectionViewLayout.sectionHeadersPinToVisibleBounds = true
+      // could do more configuration here, but opted to use UICollectionViewDelegateFlowLayout instead
     }
   }
   
@@ -82,17 +83,29 @@ class GroupedViewController: UIViewController, UICollectionViewDataSource, UICol
   
   
   // MARK: - UICollectionViewDelegateFlowLayout
+
+  private struct CellLayout {
+    static let cellHeight: CGFloat = 80
+    static let cellWidth: CGFloat = 100
+    
+    static let cellLeadingPadding: CGFloat = cellWidth
+    static let cellTrailingPadding: CGFloat = 32
+    static let cellTopPadding: CGFloat = 20
+  }
   
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-    return CGSize(width: 100, height: 80)
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let parentViewWidth: CGFloat = collectionView.bounds.size.width
+    
+    return CGSize(width: (parentViewWidth - CellLayout.cellLeadingPadding - CellLayout.cellTrailingPadding), height: CellLayout.cellHeight)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    return UIEdgeInsets(top: -75, left: 100, bottom: 10, right: 0)
+    return UIEdgeInsets(top: -CellLayout.cellHeight, left: CellLayout.cellLeadingPadding, bottom: CellLayout.cellTopPadding, right: 0)
   }
   
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return CGFloat(10)
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    return CGSize(width: CellLayout.cellWidth, height: CellLayout.cellHeight)
   }
+  
 }
 
