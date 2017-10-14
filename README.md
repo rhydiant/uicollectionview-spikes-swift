@@ -1,7 +1,8 @@
 # uicollectionview-spikes-swift
 
 ### Grouped
-![](https://thumbs.gfycat.com/GiddyAromaticHypacrosaurus-size_restricted.gif | width=200)
+<img src="https://thumbs.gfycat.com/GiddyAromaticHypacrosaurus-size_restricted.gif" width="200">
+![]( | width=200)
 
 ### Carousel
 ![](https://thumbs.gfycat.com/WarmheartedRecklessLabradorretriever-size_restricted.gif | width=200)
